@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="BaseAnchorPane" prefHeight="411.0" prefWidth="992.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="koltonwebberinvmgr.View_Controller.MainScreenController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="86.0" prefHeight="265.0" prefWidth="475.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Label layoutX="14.0" layoutY="28.0" text="Parts">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="PartsSearch" layoutX="224.0" layoutY="24.0" mnemonicParsing="false" onAction="#PartsSearchButtonHandler" prefHeight="25.0" prefWidth="70.0" style="-fx-border-color: gray;" text="Search" />
+            <TextField fx:id="PartsSearchField" layoutX="311.0" layoutY="24.0" />
+            <TableView id="partsTable" fx:id="MainPartsTable" editable="true" layoutX="11.0" layoutY="65.0" prefHeight="137.0" prefWidth="453.0" style="-fx-border-color: darkslategrey;">
+              <columns>
+                <TableColumn id="PartID" fx:id="PartID" prefWidth="100.0" style="-fx-alignment: center_left; -fx-border-color: gray; -fx-text-fill: black;" text="Part ID" />
+                <TableColumn id="PartName" fx:id="PartName" prefWidth="113.0" style="-fx-border-color: gray; -fx-alignment: center_left; -fx-text-fill: black;" text="Part Name" />
+                  <TableColumn id="PartInventoryLevel" fx:id="PartInventoryLevel" prefWidth="114.0" style="-fx-border-color: gray; -fx-alignment: center_left; -fx-text-fill: black;" text="Inventory Level" />
+                  <TableColumn id="PartPriceCostPerUnit" fx:id="PartPriceCostPerUnit" prefWidth="126.0" style="-fx-border-color: gray; -fx-alignment: center_left;" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <Button fx:id="AddParts" layoutX="171.0" layoutY="208.0" mnemonicParsing="false" onAction="#AddPartsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Add" />
+            <Button fx:id="DeleteParts" layoutX="348.0" layoutY="208.0" mnemonicParsing="false" onAction="#DeletePartsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Delete" />
+            <Button fx:id="ModifyParts" layoutX="259.0" layoutY="208.0" mnemonicParsing="false" onAction="#ModifyPartsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Modify" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="40.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="Exit" layoutX="850.0" layoutY="362.0" mnemonicParsing="false" onAction="#ExitButtonHandler" prefHeight="35.0" prefWidth="90.0" style="-fx-border-color: gray;" text="Exit" />
+      <AnchorPane layoutX="504.0" layoutY="86.0" prefHeight="265.0" prefWidth="475.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" prefHeight="35.0" prefWidth="75.0" text="Products">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="ProductSearch" layoutX="224.0" layoutY="24.0" mnemonicParsing="false" onAction="#ProductSearchButtonHandler" prefHeight="25.0" prefWidth="70.0" style="-fx-border-color: gray;" text="Search" />
+            <TextField fx:id="ProductsSearchField" layoutX="311.0" layoutY="24.0" />
+            <TableView fx:id="MainProductsTable" layoutX="11.0" layoutY="65.0" prefHeight="137.0" prefWidth="453.0" style="-fx-border-color: gray;">
+               <columns>
+                  <TableColumn fx:id="ProductID" prefWidth="100.0" style="-fx-border-color: gray;" text="Product ID" />
+                  <TableColumn fx:id="ProductName" prefWidth="113.0" style="-fx-border-color: gray;" text="Product Name" />
+                  <TableColumn fx:id="ProductInventoryLevel" prefWidth="114.0" style="-fx-border-color: gray;" text="Inventory Level" />
+                  <TableColumn fx:id="ProductPricePerUnit" prefWidth="126.0" style="-fx-border-color: gray;" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="AddProducts" layoutX="171.0" layoutY="208.0" mnemonicParsing="false" onAction="#AddProductsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Add" />
+            <Button fx:id="ModifyProducts" layoutX="259.0" layoutY="208.0" mnemonicParsing="false" onAction="#ModifyProductsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Modify" />
+            <Button fx:id="DeleteProducts" layoutX="348.0" layoutY="208.0" mnemonicParsing="false" onAction="#DeleteProductsButtonHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-border-color: gray;" text="Delete" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
